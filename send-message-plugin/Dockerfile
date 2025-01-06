@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 alpine:3.16 as base
+FROM --platform=linux/amd64 alpine:3.17 as base
 
 RUN apk add --no-cache curl jq
 RUN apk add openssl
