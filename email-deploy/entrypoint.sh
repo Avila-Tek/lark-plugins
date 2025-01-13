@@ -1,5 +1,5 @@
 now=$(date +'%Y-%m-%d %H:%M:%S')
-notes=$(gh release view v0.0.1 -R $REPOSITORY --json body -q .body)
+notes=$(gh release view -R $REPOSITORY --json body -q .body)
 plain_text_notes=$(echo $notes) 
 # Convertir Markdown a HTML
 # Aquí usamos pandoc para la conversión, asegúrate de tener pandoc instalado
