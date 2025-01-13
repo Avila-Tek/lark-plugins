@@ -58,7 +58,7 @@ jobs:
           RECEIVE_EMAIL: lsanchez@avilatek.dev
           REPOSITORY: https://github.com/${{ github.repository }}
           LINK: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}
-        uses: docker://lesanpi/email-deploy:v1.1.0
+        uses: docker://lesanpi/email-deploy:v1.1.1
 ```
 
 ## 2. Configurar el Template de Notas de Cambio

@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 node:23-alpine as base
 
 RUN npm i postmark-cli -g
-RUN apk add --no-cache curl jq openssl pandoc
+RUN apk add --no-cache curl jq openssl pandoc github-cli
 
 
 ARG POSTMARK_SERVER_TOKEN
