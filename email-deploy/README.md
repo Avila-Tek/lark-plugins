@@ -48,13 +48,15 @@ jobs:
           gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
               --title="${tag#v}" \
-              --generate-notes
+              --generate-notes || true
       - name: New release notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           POSTMARK_SERVER_TOKEN: ${{ secrets.POSTMARK_SERVER_TOKEN }}
           APP_NAME: Fullstack Template
           VERSION: ${{ github.ref_name }}
+          # Aqui va el email del PM
+          # Para colocar multiples pones correo1@gmail.com,correo2@gmail.com,correo3@gmail.com
           RECEIVE_EMAIL: lsanchez@avilatek.dev
           REPOSITORY: https://github.com/${{ github.repository }}
           LINK: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}
